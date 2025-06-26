@@ -18,26 +18,52 @@
 -- 
 ----------------------------------------------------------------------------------
 
-
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
+library library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
 
 entity Timer is
---  Port ( );
+
+    generic(
+        TIME_LIMIT : integer := 22
+    );
+    
+    Port( 
+        clk     : in std_logic;
+        nRst    : in std_logic;
+        enable  : in std_logic;
+
+        done    : out std_logic
+);
 end Timer;
 
-architecture Behavioral of Timer is
 
+Architecture Behavioral of Timer is
+    -- Define Signals
+    signal counter      : integer range 0 to TIME_LIMIT;
+    signal done_int     : std_logic := '0';
 begin
 
+    increment_proc  : process(clk, nRst)
+    begin
+        if nRst = '0' then
+            counter     <= '0';
+            done_int    <= '0';
+        elsif rising_edge(clk) then 
+            if enable = '1' then
+                if counter < TIME_LIMIT then
+                    counter <= counter + 1;
+                    done_int <= '0';
+                else 
+                    done_int <= '1';
+                end if;
+            else
+                counter <= '0';
+                dont_int <= '0';
+            end if;
+        end if;
+    end process;
+       
+    done <= done_int;
 
 end Behavioral;
