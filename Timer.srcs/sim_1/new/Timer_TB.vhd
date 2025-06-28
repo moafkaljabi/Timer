@@ -19,7 +19,9 @@
 ----------------------------------------------------------------------------------
 
 
-library library IEEE;
+
+
+library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
@@ -31,9 +33,9 @@ end Timer_TB;
 Architecture Simulation of Timer_TB is
 
     -- CUT
-    component Timer is
+    component Timer
         generic(
-            TIME_LIMIT  : integer := 10
+            TIME_LIMIT  : integer := 9
         );
 
         port(
@@ -55,6 +57,60 @@ Architecture Simulation of Timer_TB is
 
 begin
     -- Instantiate Timer
-    uut: Timer
+    uut: Timer 
+        generic map (
+            TIME_LIMIT => 90
+        )
+
+        port map (
+            clk     => clk_tb,
+            nRst    => nRst_tb,
+            enable  => enable_tb,
+            done    => done_tb
+        );
+
+    -- Clock generation
+    clk_gen_process : process
+    begin
+        while true loop
+            clk_tb <= '0';
+            wait for clk_period / 2;
+            clk_tb <= '1';
+            wait for clk_period / 2;
+        end loop;
+    end process;
+
+    -- Stimulus process
+    stim_process : process
+    begin
+        -- Initial Reset  
+        nRst_tb     <= '0';
+        enable_tb   <= '0';
+        wait for clk_period * 2;
+
+        -- Release Reset
+        nRst_tb     <= '1';
+        wait for clk_period;
+
+        -- Enable Timer
+        enable_tb <= '1';
+        wait for clk_period * 10;
+
+        -- simulate a pause; disable timer
+        enable_tb <= '0';
+        wait for clk_period * 5;
+
+        -- re-enable timer 
+        enable_tb <= '1';
+        wait for clk_period * 10;
+        
+        -- Wait
+        wait;
+    end process;
 
 end Simulation;
+
+
+
+
+

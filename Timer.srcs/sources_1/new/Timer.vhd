@@ -18,14 +18,14 @@
 -- 
 ----------------------------------------------------------------------------------
 
-library library IEEE;
+library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
 entity Timer is
 
     generic(
-        TIME_LIMIT : integer := 22
+        TIME_LIMIT : integer := 99
     );
     
     Port( 
@@ -38,16 +38,16 @@ entity Timer is
 end Timer;
 
 
-Architecture Behavioral of Timer is
+architecture Behavioral of Timer is
     -- Define Signals
-    signal counter      : integer range 0 to TIME_LIMIT;
+    signal counter      : integer range 0 to TIME_LIMIT := 0;
     signal done_int     : std_logic := '0';
 begin
 
     increment_proc  : process(clk, nRst)
     begin
         if nRst = '0' then
-            counter     <= '0';
+            counter     <= 0;
             done_int    <= '0';
         elsif rising_edge(clk) then 
             if enable = '1' then
@@ -58,8 +58,8 @@ begin
                     done_int <= '1';
                 end if;
             else
-                counter <= '0';
-                dont_int <= '0';
+                counter <= 0;
+                done_int <= '0';
             end if;
         end if;
     end process;
