@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Timer_TB_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Timer_TB" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="1,501.040 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,607.041 ns"></ZoomEndTime>
+      <Cursor1Time time="1,995.716 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="263"></NameColumnWidth>
+      <ValueColumnWidth column_width="255"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="20" />
+   <wvobject type="logic" fp_name="/Timer_TB/clk_tb">
+      <obj_property name="ElementShortName">clk_tb</obj_property>
+      <obj_property name="ObjectShortName">clk_tb</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Timer_TB/enable_tb">
+      <obj_property name="ElementShortName">enable_tb</obj_property>
+      <obj_property name="ObjectShortName">enable_tb</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Timer_TB/done_tb">
+      <obj_property name="ElementShortName">done_tb</obj_property>
+      <obj_property name="ObjectShortName">done_tb</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/Timer_TB/uut/counter">
+      <obj_property name="ElementShortName">counter</obj_property>
+      <obj_property name="ObjectShortName">counter</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/Timer_TB/uut/TIME_LIMIT">
+      <obj_property name="ElementShortName">TIME_LIMIT</obj_property>
+      <obj_property name="ObjectShortName">TIME_LIMIT</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Timer_TB/uut/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Timer_TB/uut/nRst">
+      <obj_property name="ElementShortName">nRst</obj_property>
+      <obj_property name="ObjectShortName">nRst</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Timer_TB/uut/enable">
+      <obj_property name="ElementShortName">enable</obj_property>
+      <obj_property name="ObjectShortName">enable</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Timer_TB/uut/done">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/Timer_TB/uut/counter">
+      <obj_property name="ElementShortName">counter</obj_property>
+      <obj_property name="ObjectShortName">counter</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Timer_TB/uut/done_int">
+      <obj_property name="ElementShortName">done_int</obj_property>
+      <obj_property name="ObjectShortName">done_int</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/Timer_TB/uut/TIME_LIMIT">
+      <obj_property name="ElementShortName">TIME_LIMIT</obj_property>
+      <obj_property name="ObjectShortName">TIME_LIMIT</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Timer_TB/uut/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Timer_TB/uut/nRst">
+      <obj_property name="ElementShortName">nRst</obj_property>
+      <obj_property name="ObjectShortName">nRst</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Timer_TB/uut/enable">
+      <obj_property name="ElementShortName">enable</obj_property>
+      <obj_property name="ObjectShortName">enable</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Timer_TB/uut/done">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/Timer_TB/uut/counter">
+      <obj_property name="ElementShortName">counter</obj_property>
+      <obj_property name="ObjectShortName">counter</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Timer_TB/uut/done_int">
+      <obj_property name="ElementShortName">done_int</obj_property>
+      <obj_property name="ObjectShortName">done_int</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/Timer_TB/uut/TIME_LIMIT">
+      <obj_property name="ElementShortName">TIME_LIMIT</obj_property>
+      <obj_property name="ObjectShortName">TIME_LIMIT</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/Timer_TB/clk_period">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+</wave_config>
